@@ -20,15 +20,16 @@ Call `freeskim` in an ActiveRecord class and pass the name of the attribute you 
 
 ```ruby
 class Key < ActiveRecord::Base
-  freeskim :numbers , to: :abstract_key
-  freeskim :stars   , to: :abstract_key
+  freeskim :name ,    to: :user_attributes
+  freeskim :email,    to: :user_attributes
+  freeskim :address,  to: :user_attributes
 end
 ```
 
-This will automatically save the attributes 'numbers' and 'stars' in json format in the 'abstract_key' column.
+This will automatically save the attributes 'name' and 'email' and 'address' in json format in the 'user_attributes' column.
 
 ## Development
 
 Questions or problems? Please post them on the [issue tracker](https://github.com/nata79/freeskimer/issues). You can contribute changes by forking the project and submitting a pull request. You can ensure the tests passing by running `bundle` and `rake`.
 
-This gem is created by Ryan Bates and is under the MIT License.
+This gem is created by André Barbosa and is under the MIT License.
